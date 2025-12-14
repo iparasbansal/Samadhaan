@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased;
+
+  }
+}
+
+@layer components {
+  /* Navbar */
+  .nav-solid {
+    @apply bg-slate-900 border-b border-slate-800 shadow-sm;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-cyan-500 text-white font-semibold rounded-lg px-4 py-2 shadow-md hover:from-indigo-500 hover:to-cyan-400 transition-transform transform hover:-translate-y-0.5;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 border border-slate-700 text-slate-200 rounded-lg px-3 py-2 hover:bg-slate-800 transition-colors;
+  }
+  .btn-ghost {
+    @apply text-slate-300 hover:text-white;
+  }
+
+  /* Card */
+  .card-dark {
+    @apply bg-slate-800 border border-slate-700 rounded-2xl p-5 shadow-lg;
+  }
+
+  /* Input */
+  .input-dark {
+    @apply w-full rounded-lg bg-slate-800 border border-slate-700 px-3 py-2 text-slate-100 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-cyan-500;
+  }
+  
+
+  /* Badge variants */
+  .badge-default { @apply bg-slate-700 text-slate-200 px-3 py-1 rounded-full text-xs font-semibold; }
+  .badge-success { @apply bg-emerald-600 text-white px-3 py-1 rounded-full text-xs font-semibold; }
+  .badge-warning { @apply bg-amber-500 text-slate-900 px-3 py-1 rounded-full text-xs font-semibold; }
+  .badge-critical { @apply bg-rose-600 text-white px-3 py-1 rounded-full text-xs font-semibold; }
+
+  /* small animations */
+  .fade-in { animation: fadeIn 0.28s ease-out both; }
+  @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+}
